@@ -366,7 +366,7 @@ export default async function on({ Exp, ev, store, cht, ai, is }) {
                 externalAdReply: {
                     title: cht.pushName,
                     body: "Artificial Intelligence, The beginning of the robot era",
-                    thumbnailUrl: "https://telegra.ph/file/e072d1b7d5fe75221a36c.jpg",
+                    thumbnailUrl: "https://static.promediateknologi.id/crop/8x313:725x915/0x0/webp/photo/p2/74/2024/05/07/c8b7413ccd33544ab59691a09a7b4107-2471837881.jpg",
                     sourceUrl: "https://github.com/Usbeje",
                     mediaUrl: `http://ẉa.me/6288211118394`,
                     renderLargerThumbnail: true,
