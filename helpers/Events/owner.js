@@ -24,8 +24,8 @@ export default async function on({ cht, Exp, store, ev, is }) {
                     externalAdReply: {
                     title: !cust ? "🔐Premium Access!" : "🔓Unlocked Premium Access!",
                     body: !cust ?  "Dapatkan akses premium untuk membuka fitur² terkunci" : "Sekarang kamu adalah user 🔑Premium, dapat menggunakan fitur² terkunci!",
-                    thumbnailUrl: !cust ? 'https://telegra.ph/file/310c10300252b80e12305.jpg' : 'https://telegra.ph/file/ae815f35da7c5a2e38712.jpg',
-                    mediaUrl: `http://ẉa.me/6283110928302/${!cust ? "89e838":"jeie337"}`,
+                    thumbnailUrl: !cust ? 'https://static.promediateknologi.id/crop/8x313:725x915/0x0/webp/photo/p2/74/2024/05/07/c8b7413ccd33544ab59691a09a7b4107-2471837881.jpg' : 'https://static.promediateknologi.id/crop/8x313:725x915/0x0/webp/photo/p2/74/2024/05/07/c8b7413ccd33544ab59691a09a7b4107-2471837881.jpg',
+                    mediaUrl: `http://ẉa.me/6288211118394/${!cust ? "89e838":"jeie337"}`,
                     sourceUrl: `https://wa.me/${owner[0].split("@")[0]}?text=Hello,+I+have+buy+🔑Premium`,
                     renderLargerThumbnail: true,
                     showAdAttribution: true,
