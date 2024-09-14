@@ -17,7 +17,7 @@ export default async function on({ Exp, ev, store, cht, ai, is }) {
         cmd: ['cover','covers'],
         listmenu: ['covers'],
         tag: 'voice_changer',
-        energy: 70,
+        energy: 0,
         premium: true,
         args: "Sertakan modelnya!",
         media: { 
@@ -278,7 +278,7 @@ export default async function on({ Exp, ev, store, cht, ai, is }) {
         cmd: ['luma','img2video'], 
         listmenu: ['luma'],
         tag: "ai",
-        energy: 185,
+        energy: 0,
         premium: true,
         media: { 
            type: ["image"],
@@ -367,8 +367,8 @@ export default async function on({ Exp, ev, store, cht, ai, is }) {
                     title: cht.pushName,
                     body: "Artificial Intelligence, The beginning of the robot era",
                     thumbnailUrl: "https://telegra.ph/file/e072d1b7d5fe75221a36c.jpg",
-                    sourceUrl: "https://github.com/Rifza123",
-                    mediaUrl: `http://ẉa.me/6283110928302/9992828`,
+                    sourceUrl: "https://github.com/Usbeje",
+                    mediaUrl: `http://ẉa.me/6288211118394`,
                     renderLargerThumbnail: true,
                     showAdAttribution: true,
                     mediaType: 1,
@@ -483,7 +483,7 @@ export default async function on({ Exp, ev, store, cht, ai, is }) {
         listmenu: ['animediff'],
         tag: 'stablediffusion',
         args: "*Harap beri deskripsi gambarnya!*",
-        energy: 17
+        energy: 0
     }, async() => {
     let [text1, text2] = cht.q ? cht.q.split("|") : []
         await cht.edit("Bntr...", keys[sender])
@@ -495,7 +495,7 @@ export default async function on({ Exp, ev, store, cht, ai, is }) {
         listmenu: ['dalle3'],
         tag: 'art',
         args: "*Harap beri deskripsi gambarnya!*",
-        energy: 17,
+        energy: 0,
         badword: true
     }, async() => {
     let [text1, text2] = cht.q ? cht.q.split("|") : []
@@ -507,7 +507,7 @@ export default async function on({ Exp, ev, store, cht, ai, is }) {
         cmd: ['geminiimage','geminiimg'], 
         listmenu: ['geminiimage'],
         tag: "ai",
-        energy: 20,
+        energy: 0,
         args: "Mau tanya apa?",
         media: { 
            type: ["image"],
@@ -522,7 +522,7 @@ export default async function on({ Exp, ev, store, cht, ai, is }) {
         cmd: ['songai','songgenerator'],
         listmenu: ['songgenerator'],
         tag: 'ai',
-        energy: 70,
+        energy: 0,
         premium: true,
         args: "Sertakan prompt lagu yg ingin dibuat!"
     }, async({ media }) => {
