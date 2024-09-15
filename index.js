@@ -53,7 +53,7 @@ async function launch() {
         const Exp = makeWASocket({
             logger: pino({ level: 'silent' }),
             printQRInTerminal: !global.pairingCode,
-            browser: ['Chrome (Linux)', global["botname"], '1.0.0'],
+            browser: ['Termux (Linux)', global["botname"], '9.9.9'],
             auth: state
         });
         
