@@ -3,10 +3,10 @@ await import("./toolkit/set/string.prototype.js");
 await "./toolkit/set/global.js".r();
 
 /*!-======[ Mudules Imports ]======-!*/
-const readline = "readline".import();
-const fs = "fs".import();
-const chalk = "chalk".import();
-const TelegramBot = require('node-telegram-bot-api'); // Import Telegram Bot API
+const readline = await import("readline");
+const fs = await import("fs");
+const chalk = await import("chalk");
+const TelegramBot = (await import('node-telegram-bot-api')).default; // Menggunakan import untuk modul ESM
 
 /*!-======[ Functions Imports ]======-!*/
 Data.helper = (await "./helpers/client.js".r()).default;
