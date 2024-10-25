@@ -1,16 +1,18 @@
 /*!-======[ Preparing Configuration ]======-!*/
-await import("./toolkit/set/string.prototype.js");
-await "./toolkit/set/global.js".r();
+await import ("./toolkit/set/string.prototype.js")
+await "./toolkit/set/global.js".r()
 
 /*!-======[ Mudules Imports ]======-!*/
-const readline = await import("readline");
-const fs = await import("fs");
-const chalk = await import("chalk");
-const TelegramBot = (await import('node-telegram-bot-api')).default; // Menggunakan import untuk modul ESM
+const readline = "readline".import()
+const fs = "fs".import()
+const chalk = "chalk".import()
+const TelegramBot = "node-telegram-bot-api".import(); // Mengimpor Telegram Bot
+const pino = "pino".import();
 
 /*!-======[ Functions Imports ]======-!*/
-Data.helper = (await "./helpers/client.js".r()).default;
-Data.utils = (await "./helpers/utils.js".r()).default;
+Data.helper = (await "./helpers/client.js".r()).default
+Data.utils = (await "./helpers/utils.js".r()).default
+Data.In = (await "./helpers/interactive.js".r()).default
 
 async function launch() {
     const rl = readline.createInterface({
@@ -20,25 +22,28 @@ async function launch() {
 
     const question = (text) => new Promise((resolve) => rl.question(text, resolve));
 
-    // Masukkan token bot Telegram Anda di sini
-    const token = '7509744768:AAF9py0gQGdO61IecG_oPPkVtjs0gli8l3I';
-    const bot = new TelegramBot(token, { polling: true }); // Inisialisasi bot
+    // Ganti bagian ini untuk mengonfigurasi Telegram Bot
+    const token = '7509744768:AAF9py0gQGdO61IecG_oPPkVtjs0gli8l3I'; // Ganti dengan token bot Telegram Anda
+    const bot = new TelegramBot(token, { polling: true }); // Membuat instance bot Telegram
+
+    // Menangani proses dengan Telegram
+    console.log(chalk.green('Bot Telegram siap dan menunggu pesan...'));
 
     bot.onText(/\/start/, (msg) => {
         const chatId = msg.chat.id;
-        bot.sendMessage(chatId, 'Bot Telegram Anda sudah aktif!');
+        bot.sendMessage(chatId, 'Selamat datang! Kirimkan pesan Anda untuk mulai ngobrol.');
     });
 
-    // Menangani pesan yang diterima
-    bot.on('message', (msg) => {
+    bot.on('message', async (msg) => {
         const chatId = msg.chat.id;
-        // Lakukan sesuatu dengan pesan di sini
-        if (msg.text) {
-            bot.sendMessage(chatId, `Anda mengirim: ${msg.text}`);
+        const userInput = msg.text;
+
+        if (userInput && userInput !== '/start') {
+            const exs = { cht: msg, Exp: bot, is: {}, store: {} }; // Sesuaikan dengan struktur yang ada
+            await Data.utils(exs);
+            await Data.helper(exs);
         }
     });
-
-    // Kode lain yang mungkin Anda miliki
 }
 
 launch();
